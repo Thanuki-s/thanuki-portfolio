@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thanuki Amarathunga | Business & Data Analyst</title>
+<meta name="description" content="Portfolio of Thanuki Amarathunga, a Melbourne-based Business and Data Analyst with experience in requirements gathering, process mapping, system testing and data analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f2f4fa;
+  --surface: #ffffff;
+  --ink: #17203a;
+  --muted: #55607d;
+  --line: #d9deec;
+  --accent: #4a3fd1;
+  --accent-ink: #ffffff;
+  --accent-soft: #e9e7fb;
+  --ok: #1f7a63;
+  --ok-soft: #dff2ec;
+  --display: "Bricolage Grotesque", "Trebuchet MS", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11162a;
+    --surface: #1a2140;
+    --ink: #eceffa;
+    --muted: #a3acc9;
+    --line: #2d3560;
+    --accent: #9a92ff;
+    --accent-ink: #11162a;
+    --accent-soft: #27285a;
+    --ok: #5fd1b2;
+    --ok-soft: #173a3a;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11162a;
+  --surface: #1a2140;
+  --ink: #eceffa;
+  --muted: #a3acc9;
+  --line: #2d3560;
+  --accent: #9a92ff;
+  --accent-ink: #11162a;
+  --accent-soft: #27285a;
+  --ok: #5fd1b2;
+  --ok-soft: #173a3a;
+}
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 72px); scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+/* nav */
+header.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+header.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; }
+.brand { font-family: var(--display); font-weight: 800; font-size: 18px; color: var(--ink); text-decoration: none; }
+nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+nav a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
+nav a:hover { color: var(--ink); }
+@media (max-width: 640px) { nav ul { display: none; } }
+
+/* hero */
+.hero { padding: 64px 0 40px; }
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+}
+.hero .sub { font-size: 20px; color: var(--muted); max-width: 56ch; margin: 0 0 32px; }
+.story {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: 6px 14px 14px 6px;
+  padding: 24px 28px;
+  max-width: 720px;
+}
+.story-head { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+.story-head b { color: var(--ink); font-weight: 600; }
+.story p { margin: 0 0 10px; font-size: 18px; }
+.story p strong { font-family: var(--display); font-weight: 700; color: var(--accent); }
+.criteria { margin: 18px 0 0; padding: 16px 0 0; border-top: 1px dashed var(--line); list-style: none; display: grid; gap: 8px; }
+.criteria li { display: flex; gap: 10px; align-items: flex-start; font-size: 16px; }
+.tick {
+  flex: none; width: 20px; height: 20px; margin-top: 3px;
+  border-radius: 5px; background: var(--ok-soft); color: var(--ok);
+  display: grid; place-items: center; font-size: 13px; font-weight: 700;
+}
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn {
+  display: inline-block; padding: 12px 20px; border-radius: 10px;
+  font-weight: 600; font-size: 16px; text-decoration: none;
+  border: 2px solid var(--accent);
+}
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn:hover { filter: brightness(1.08); }
+
+/* sections */
+section { padding: 48px 0; border-top: 1px solid var(--line); }
+section h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 38px);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 24px;
+}
+.lede { max-width: 62ch; }
+.lede p { margin: 0 0 14px; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 24px; }
+.fact { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.fact b { display: block; font-family: var(--display); font-size: 17px; }
+.fact span { color: var(--muted); font-size: 15px; }
+
+/* skills */
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.skill-group h3 { font-family: var(--display); font-size: 18px; margin: 0 0 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.chips li {
+  background: var(--accent-soft); color: var(--ink);
+  padding: 4px 12px; border-radius: 999px; font-size: 15px; font-weight: 500;
+}
+
+/* projects */
+.projects { display: grid; gap: 14px; }
+details.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+details.project[open] { border-color: var(--accent); }
+details.project summary {
+  list-style: none; cursor: pointer; padding: 18px 22px;
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: center;
+}
+details.project summary::-webkit-details-marker { display: none; }
+.p-title { font-family: var(--display); font-weight: 700; font-size: 20px; }
+.p-tech { grid-column: 1; color: var(--muted); font-size: 15px; }
+.p-toggle {
+  grid-row: 1 / span 2; grid-column: 2;
+  width: 32px; height: 32px; border-radius: 8px;
+  display: grid; place-items: center;
+  background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 20px;
+}
+details.project[open] .p-toggle { transform: rotate(45deg); }
+.p-body { padding: 0 22px 22px; max-width: 70ch; }
+.p-body p { margin: 0 0 12px; }
+.p-body h4 { font-family: var(--display); font-size: 15px; margin: 16px 0 6px; color: var(--muted); font-weight: 700; }
+.p-body ul { margin: 0; padding-left: 20px; }
+.p-body li { margin-bottom: 4px; }
+.badge { display: inline-block; font-size: 13px; font-weight: 600; color: var(--ok); background: var(--ok-soft); padding: 2px 10px; border-radius: 999px; margin-bottom: 10px; }
+
+/* timeline */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 2px solid var(--line); display: grid; gap: 28px; }
+.timeline li { position: relative; }
+.timeline li::before {
+  content: ""; position: absolute; left: -30px; top: 8px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--accent);
+}
+.t-role { font-family: var(--display); font-weight: 700; font-size: 19px; margin: 0; }
+.t-meta { color: var(--muted); font-size: 15px; margin: 0 0 8px; }
+.timeline ul { margin: 0; padding-left: 20px; max-width: 70ch; }
+.timeline li li { margin-bottom: 4px; }
+.timeline li li::before { content: none; }
+
+/* certs */
+.certs { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.certs li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.certs b { font-weight: 600; }
+.certs span { color: var(--muted); font-size: 15px; }
+.certs .star { border-color: var(--accent); }
+
+/* fun facts */
+.fun { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.fun li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; display: flex; gap: 14px; align-items: flex-start; max-width: 70ch; }
+.fun .emoji { font-size: 24px; line-height: 1.3; }
+
+/* contact */
+.contact p { max-width: 56ch; margin: 0 0 20px; }
+footer { padding: 32px 0 48px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); }
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .hero { padding-top: 40px; }
+  .story { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Thanuki Amarathunga</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>I turn business needs into systems that work.</h1>
+      <p class="sub">Hi, I'm Thanuki, a Business and Data Analyst in Melbourne. I work on requirements, process mapping, system testing and data analysis.</p>
+
+      <div class="story" aria-label="A user story describing what I offer">
+        <div class="story-head"><b>User story</b><span>Status: Ready for hire</span></div>
+        <p><strong>As a</strong> hiring manager,</p>
+        <p><strong>I want</strong> an analyst who can connect stakeholders, designers and developers,</p>
+        <p><strong>so that</strong> the right thing gets built the first time.</p>
+        <ul class="criteria" aria-label="Acceptance criteria">
+          <li><span class="tick" aria-hidden="true">✓</span>Gathers and documents requirements from real stakeholders</li>
+          <li><span class="tick" aria-hidden="true">✓</span>Maps processes and writes user stories and functional specs</li>
+          <li><span class="tick" aria-hidden="true">✓</span>Tests the system and documents defects before release</li>
+          <li><span class="tick" aria-hidden="true">✓</span>Backs decisions with data using SQL, R and Power BI</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="mailto:thanukiamarathunga@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/thanuki-amarathunga" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="#projects">See my projects</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>About me</h2>
+      <div class="lede">
+        <p>I graduated from Monash University with a Bachelor of Information Technology, majoring in Business Information Systems with a minor in Data Science. I'm drawn to the space between business and technology: understanding how a process really works, then helping turn it into something practical.</p>
+        <p>I started in business analysis on a live client project for BIG-CAT, covering interviews, surveys, user stories, process maps, prototypes and usability testing. I now work as a Junior Business Analyst, supporting requirements, functional specifications and system testing. I've also worked in UX/UI and web development, so I can see a project from the user's side as well as the developer's.</p>
+        <p>I'm Microsoft Certified in Dynamics 365 Supply Chain Management and keen to support process improvement in operations- and production-driven businesses.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>Monash University</b><span>BIT, Business Information Systems + Data Science</span></div>
+        <div class="fact"><b>Junior Business Analyst</b><span>Webs R Us, 2026 to present</span></div>
+        <div class="fact"><b>Dynamics 365 certified</b><span>Supply Chain Management Functional Consultant</span></div>
+        <div class="fact"><b>Melbourne, VIC</b><span>Full-time work rights in Australia</span></div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-group">
+          <h3>Business analysis</h3>
+          <ul class="chips">
+            <li>Requirements gathering</li><li>Stakeholder engagement</li><li>Process mapping</li><li>User stories</li><li>Functional specifications</li><li>Gap analysis</li><li>UAT and system testing</li><li>Agile</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Data and systems</h3>
+          <ul class="chips">
+            <li>SQL</li><li>R</li><li>Python</li><li>Power BI</li><li>Excel</li><li>SAP</li><li>Dynamics 365 (SCM, F&amp;O)</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Design and build</h3>
+          <ul class="chips">
+            <li>Figma</li><li>Wireframes and prototypes</li><li>Usability testing</li><li>Angular</li><li>Node.js</li><li>CakePHP</li><li>MongoDB</li><li>Java</li><li>Git and GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <details class="project" open>
+          <summary>
+            <span class="p-title">Self-Assessment Tool, live client project</span>
+            <span class="p-tech">Business analysis · Figma · CakePHP · MongoDB</span>
+            <span class="p-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="p-body">
+            <span class="badge">Featured: client work</span>
+            <p>Final-year project for BIG-CAT. I handled the business analysis and helped build a responsive web tool for a real client.</p>
+            <h4>What I did</h4>
+            <ul>
+              <li>Gathered requirements through stakeholder interviews and surveys</li>
+              <li>Documented business and functional requirements and kept in regular contact with the client</li>
+              <li>Designed user flows and wireframes in Figma</li>
+              <li>Ran usability testing and refined the interface for accessibility and performance</li>
+              <li>Built the tool with CakePHP, MongoDB, HTML, CSS and JavaScript</li>
+            </ul>
+            <h4>Live site</h4>
+            <p><a href="https://big-cat.net" target="_blank" rel="noopener">big-cat.net</a></p>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <span class="p-title">Loan approval prediction</span>
+            <span class="p-tech">R · tidyverse · logistic regression · random forest</span>
+            <span class="p-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="p-body">
+            <p>Classification models built on 4,269 loan applications to predict approval outcomes.</p>
+            <h4>What I did</h4>
+            <ul>
+              <li>Cleaned the data, explored it and visualised it with tidyverse</li>
+              <li>Compared logistic regression and random forest models</li>
+              <li>Improved accuracy from 91% to 98% (AUC 0.96 to 0.996)</li>
+              <li>Documented the full analysis in a reproducible RMarkdown report</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <span class="p-title">Package delivery management app</span>
+            <span class="p-tech">Angular · Node.js · Express · MongoDB · Socket.io · Google Cloud</span>
+            <span class="p-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="p-body">
+            <p>A full-stack single-page application for managing drivers and packages (university project, FIT2095).</p>
+            <h4>What I did</h4>
+            <ul>
+              <li>Built RESTful APIs for full create, read, update and delete operations</li>
+              <li>Added real-time updates with Socket.io</li>
+              <li>Implemented sign-up, login and protected routes</li>
+              <li>Deployed the frontend and backend to Google Cloud virtual machines</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <span class="p-title">Natural language processing and network analysis</span>
+            <span class="p-tech">R · igraph · text mining</span>
+            <span class="p-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="p-body">
+            <p>Built and analysed a corpus of 20+ documents (university project, FIT3152).</p>
+            <h4>What I did</h4>
+            <ul>
+              <li>Performed hierarchical clustering using cosine similarity</li>
+              <li>Ran sentiment and network analysis with igraph</li>
+              <li>Produced a technical report and presentation</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <span class="p-title">Android mobile app</span>
+            <span class="p-tech">Java · MVVM · Room · Google Maps API</span>
+            <span class="p-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="p-body">
+            <p>A native Android app built with MVVM architecture (university project, FIT2081).</p>
+            <h4>What I did</h4>
+            <ul>
+              <li>Used Room Database, LiveData, authentication and navigation components</li>
+              <li>Integrated the Google Maps API and gesture-based UI features</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <span class="p-title">Responsive website prototype</span>
+            <span class="p-tech">Figma · UX/UI</span>
+            <span class="p-toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="p-body">
+            <p>Desktop and mobile wireframes plus an interactive prototype with navigation flows.</p>
+            <h4>What I did</h4>
+            <ul>
+              <li>Applied visual hierarchy, spacing and component-based design principles</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience and education</h2>
+      <ul class="timeline">
+        <li>
+          <p class="t-role">Junior Business Analyst, Webs R Us</p>
+          <p class="t-meta">April 2026 to present</p>
+          <ul>
+            <li>Gather and document requirements with stakeholders</li>
+            <li>Analyse business processes and identify improvements</li>
+            <li>Translate requirements into functional specifications for developers</li>
+            <li>Prepare test cases, support system testing and document defects</li>
+            <li>Maintain user stories, workflows and process maps</li>
+          </ul>
+        </li>
+        <li>
+          <p class="t-role">Business Analyst, BIG-CAT</p>
+          <p class="t-meta">June 2025 to December 2025</p>
+          <ul>
+            <li>Gathered requirements through stakeholder discussions, surveys and observations</li>
+            <li>Turned user needs into functional requirements, user stories and low-fidelity prototypes</li>
+            <li>Supported process mapping, basic data analysis and reporting</li>
+            <li>Worked with designers and developers on end-to-end delivery</li>
+          </ul>
+        </li>
+        <li>
+          <p class="t-role">Web Developer, Monash University Dance Society</p>
+          <p class="t-meta">November 2024 to August 2025</p>
+        </li>
+        <li>
+          <p class="t-role">Advisor, Monash Non-Residential College</p>
+          <p class="t-meta">December 2024 to December 2025</p>
+        </li>
+        <li>
+          <p class="t-role">Bachelor of Information Technology, Monash University</p>
+          <p class="t-meta">2024 to 2025 · Major in Business Information Systems, minor in Data Science</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul class="certs">
+        <li class="star"><b>Microsoft Certified: Dynamics 365 Supply Chain Management Functional Consultant Associate</b><span>Issued September 2026</span></li>
+        <li><b>Career Essentials in Generative AI (Microsoft and LinkedIn)</b><span>July 2026</span></li>
+        <li><b>Google UX Design Professional Certificate</b><span>2026</span></li>
+        <li><b>SAP Technology Consultant (Coursera)</b><span>2026</span></li>
+        <li><b>Power BI Fundamentals (Microsoft Learn)</b><span>2025</span></li>
+        <li><b>Get Started with Finance and Operations Apps (Microsoft Learn)</b><span>2025</span></li>
+      </ul>
+    </section>
+
+    <section id="fun">
+      <h2>Three fun facts</h2>
+      <ul class="fun">
+        <li><span class="emoji" aria-hidden="true">💃</span><span>I'm a classical dancer, which means I can hold a pose for way too long and call it "technique."</span></li>
+        <li><span class="emoji" aria-hidden="true">🏸</span><span>I played competitive badminton, so yes, I will absolutely take the group project too seriously.</span></li>
+        <li><span class="emoji" aria-hidden="true">🖱️</span><span>I will notice a misaligned button and I will not be able to un-see it.</span></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Let's talk</h2>
+      <p>I'm looking for graduate and junior roles in business analysis, data analysis or UX. If you think I'd be a good fit, send me a message.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:thanukiamarathunga@gmail.com">thanukiamarathunga@gmail.com</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/thanuki-amarathunga" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Thanks for visiting my portfolio. Melbourne, Australia.</div>
+</footer>
+
+</body>
+</html>
